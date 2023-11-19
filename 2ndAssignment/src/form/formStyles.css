@@ -1,0 +1,35 @@
+.form-container{
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+  
+.form-label{
+    font-size: large;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 5px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.form-input
+{
+    margin-bottom: 5px;
+    padding: 10px;
+    font-size: 16px;
+    
+}
+
+.submit-button{
+    margin: 8px;
+    padding: 8px;
+    font-size: 16px;
+    background-color: #3A0544;
+    color: #fff;
+    
+}
