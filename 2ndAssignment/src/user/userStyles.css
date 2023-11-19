@@ -1,0 +1,10 @@
+.user{
+    background-color: aliceblue;
+    color: black;
+    width: 30rem;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 8px;
+}
+  

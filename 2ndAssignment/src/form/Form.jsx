@@ -3,9 +3,11 @@ import './formStyles.css'
 
 function Form({addUser}){
     const [userInput, setUserInput] = useState({userName:'', age:''})
-    
+    const [inputIsValid, setInputIsValid] = useState(false);
+
     const handleChange = (e) => {
         setUserInput((currData) =>{
+            validateUserInput(userInput);
             return{
                 ...currData,
                 [e.target.name]: e.target.value,
@@ -13,10 +15,21 @@ function Form({addUser}){
         })
     }
 
+    const validateUserInput = (userInput) =>{
+        if(userInput.userName === '' || userInput.age === '' || userInput.age <=0){
+            setInputIsValid(false);
+        }
+        else{
+            setInputIsValid(true);
+        }
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault(); 
-        addUser(userInput);
-        
+        if(inputIsValid){
+            addUser(userInput);
+            setUserInput({userName:'', age:''});
+        }
     }
     
     return(

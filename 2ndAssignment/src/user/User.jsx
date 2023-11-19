@@ -1,7 +1,8 @@
+import './userStyles.css'
 
 function User({user}){
     return(
-        <p>{user.userName} {user.age}</p>
+        <p className="user">{user.userName} {user.age}</p>
     )
 }
 
